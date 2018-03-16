@@ -2,10 +2,7 @@
 using Projeto.Dominio.Transporte.Entity;
 using Projeto.Dominio.Veiculos.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Projeto.Dominio.Teste
@@ -39,6 +36,26 @@ namespace Projeto.Dominio.Teste
             Assert.Equal(5800, viagem.CapacidadeAtual);
             Assert.Equal("Canada", viagem.Origem);
             Assert.Equal("Brasil", viagem.Destino);
+        }
+
+        [Fact]
+        [Trait("Entity", "Viagem")]
+        public void ObterViagemInvalidaPorQuantidadeAcimaDoSuportavel()
+        {
+            //Arrange
+            Veiculo veiculo = new Veiculo("AR LINE", VeiculoTipo.Caminhao, 1000);
+
+            //Act
+            viagem = veiculo.NovaViagem("Canada", "Brasil");
+            viagem.AdicionarMercadoria(new Mercadoria(MercadoriaTipo.Tambor, 600, false));
+            viagem.AdicionarMercadoria(new Mercadoria(MercadoriaTipo.Tambor, 600, false));
+            viagem.AdicionarMercadoria(new Mercadoria(MercadoriaTipo.Tambor, 600, false));
+
+            bool valida = viagem.EhValida();
+
+            //Assert
+            Assert.False(valida);
+            Assert.True(viagem.ValidationResult.Errors.All(t => t.PropertyName == nameof(viagem.CapacidadeAtual)));
         }
     }
 }

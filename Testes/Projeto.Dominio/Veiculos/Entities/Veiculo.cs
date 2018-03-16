@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using Projeto.Dominio.Transporte.Entity;
 using Projeto.Dominio.Veiculos.Validations;
 using System;
 
@@ -17,6 +18,7 @@ namespace Projeto.Dominio.Veiculos.Entities
         public Guid Id { get; private set; }
         public string Nome { get; private set; }
         public VeiculoTipo Tipo { get; private set; }
+
         public double CapaxidadeMaxima { get; private set; }
 
         public ValidationResult ValidationResult { get; private set; }
@@ -25,6 +27,11 @@ namespace Projeto.Dominio.Veiculos.Entities
         {
             ValidationResult = new VeiculoEstaConsistente().Validate(this);
             return ValidationResult.IsValid;
+        }
+
+        public Viagem NovaViagem(string Origem, string Destino)
+        {
+            return new Viagem(this, Origem, Destino);
         }
     }
 }

@@ -13,6 +13,15 @@ Framework de mock: <b>moq</b>
 https://github.com/moq/moq4
 ```
 
+Framework de validação: <b>fluent validation</b>
+```
+https://github.com/JeremySkinner/FluentValidation
+```
+
+Framework de mediação para comandos e mensagens: <b>MeditR</b>
+```
+https://github.com/jbogard/MediatR
+```
 
 # Configuração Inicial
 Para executar a aplicação, é necessário restaurar o Nuget do projeto.

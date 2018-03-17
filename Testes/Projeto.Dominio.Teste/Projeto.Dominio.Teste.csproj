@@ -78,6 +78,7 @@
     <Compile Include="Mocks\VeiculoMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculosTest.cs" />
+    <Compile Include="ViagemSagaTest.cs" />
     <Compile Include="ViagemTest.cs" />
   </ItemGroup>
   <ItemGroup>

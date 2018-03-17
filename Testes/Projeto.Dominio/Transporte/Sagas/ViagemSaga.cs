@@ -39,7 +39,7 @@ namespace Projeto.Dominio.Transporte.Sagas
             Veiculo veiculo = veiculoRepository.BuscarPordId(request.VeiculoId);
             if (veiculo == null)
             {
-                erros.Add($"Veiculo não localizado para o Id {veiculo.Id}");
+                erros.Add($"Veiculo não localizado para o Id {request.VeiculoId}");
                 return Task.FromResult(Guid.Empty);
             }
 
@@ -49,7 +49,7 @@ namespace Projeto.Dominio.Transporte.Sagas
                 var mercadoria = mercadoriaRepository.BuscarPordId(mercadoriaId);
                 if (mercadoria == null)
                 {
-                    alertas.Add($"Mercadoria não localizada para o Id {mercadoria.Id}");
+                    alertas.Add($"Mercadoria não localizada para o Id {mercadoriaId}");
                     continue;
                 }
 

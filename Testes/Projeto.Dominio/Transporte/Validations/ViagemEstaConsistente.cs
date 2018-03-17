@@ -25,6 +25,7 @@ namespace Projeto.Dominio.Transporte.Validations
                 .Length(2, 20).WithMessage("Destino deve ter entre 2 e 20 caractéres");
 
             RuleFor(t => t.CapacidadeAtual)
+                .GreaterThan(0).WithMessage("Informe ao menos uma mercadoria para a viagem")
                 .Custom((prop, ctx) => 
                 {
                     Viagem viagem = ctx.ParentContext.InstanceToValidate as Viagem;

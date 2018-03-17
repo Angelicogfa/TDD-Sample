@@ -57,5 +57,22 @@ namespace Projeto.Dominio.Teste
             Assert.False(valida);
             Assert.True(viagem.ValidationResult.Errors.All(t => t.PropertyName == nameof(viagem.CapacidadeAtual)));
         }
+
+        [Fact]
+        [Trait("Entity", "Viagem")]
+        public void ObterViagemInvalidaPorQuantidadeMercadoriaZero()
+        {
+            //Arrange
+            Veiculo veiculo = new Veiculo("AR LINE", VeiculoTipo.Caminhao, 1000);
+
+            //Act
+            viagem = veiculo.NovaViagem("Canada", "Brasil");
+
+            bool valida = viagem.EhValida();
+
+            //Assert
+            Assert.False(valida);
+            Assert.True(viagem.ValidationResult.Errors.All(t => t.PropertyName == nameof(viagem.CapacidadeAtual)));
+        }
     }
 }

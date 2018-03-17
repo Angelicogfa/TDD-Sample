@@ -36,4 +36,4 @@ Refatoração do código para incluir algumas novas funcionalidades com base em 
 1.  As mercadorias poderão ser informadas posteriormente, não necessitando informa-las na criação da viagem
 2.  As mercadorias deverão ser informadas junto com o documento do cliente
 3.  As mercadorias deverão ser agrupadas pelo documento do cliente
-
+4.  Não deverá existir mais de uma viagem para o mesmo veiculo do tipo Trem ou Navio no mesmo dia

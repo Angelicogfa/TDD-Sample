@@ -10,8 +10,8 @@ Para executar a aplicação, é necessário restaurar o Nuget do projeto.
 Com isso, a aplicação estará pronta para ser executada.
 
 # Próximos Passos
-1.	Refatoração do código para incluir algumas novas funcionalidades com base em regras de negócio
-a.  As mercadorias poderão ser informadas posteriormente, não necessitando informa-las na criação da viagem
-b.  As mercadorias deverão ser informadas junto com o documento do cliente
-c.  As mercadorias deverão ser agrupadas pelo documento do cliente
+Refatoração do código para incluir algumas novas funcionalidades com base em regras de negócio
+1.  As mercadorias poderão ser informadas posteriormente, não necessitando informa-las na criação da viagem
+2.  As mercadorias deverão ser informadas junto com o documento do cliente
+3.  As mercadorias deverão ser agrupadas pelo documento do cliente
 

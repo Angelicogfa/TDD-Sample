@@ -1,6 +1,17 @@
-# TDD-Sample
-Projeto contendo exemplos de aplicação do T.D.D
+# Testes
+Projeto para demonstrar a aplicação de TDD, utilizando-se de conceitos como Red, Green e Refactore, BabyStep e Mocks.
 
-## Este projeto simula um domínio de transporte de mercadorias, onde existe um veiculo, mercadorias e o transporte.
+# Configuração Inicial:
+Para executar a aplicação, é necessário restaurar o Nuget do projeto.
 
-Serão aplicado o framework xunit para testes, moq para simulação e fluentvalidation para tratativas/especificações.
+1.	Para executar os testes vá no menu Testar > Executar > Todos os Testes ou <b>CRTL + R, A</b>
+2.  Para visualizar a tela de teste vá ao menu Testar > Janelas > Gerenciador de Testes ou <b>CRTL + E, T </b>
+
+Com isso, a aplicação estará pronta para ser executada.
+
+# Próximos Passos
+1.	Refatoração do código para incluir algumas novas funcionalidades com base em regras de negócio
+a.  As mercadorias poderão ser informadas posteriormente, não necessitando informa-las na criação da viagem
+b.  As mercadorias deverão ser informadas junto com o documento do cliente
+c.  As mercadorias deverão ser agrupadas pelo documento do cliente
+

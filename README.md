@@ -1,7 +1,20 @@
 # Testes
 Projeto para demonstrar a aplicação de TDD, utilizando-se de conceitos como Red, Green e Refactore, BabyStep e Mocks.
 
-# Configuração Inicial:
+# Frameworks utilizados
+Framework de teste: <b>xUnit</b>
+´´´
+https://github.com/xunit/xunit
+https://xunit.github.io/
+´´´
+
+Framework de mock
+´´´
+https://github.com/moq/moq4
+´´´
+
+
+# Configuração Inicial
 Para executar a aplicação, é necessário restaurar o Nuget do projeto.
 
 1.	Para executar os testes vá no menu Testar > Executar > Todos os Testes ou <b>CRTL + R, A</b>
